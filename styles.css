@@ -1,0 +1,244 @@
+:root{
+    --top-bottomBgColor:#1F2937;
+    --topHeadingFont:48px;
+    --topHeadingFontWeight:bold;
+    --topHeadingColor:#f9faf8;
+    --navLinksFont:18px;
+    --navLinksColor:#e5e7eb;
+    --logoTextFont: 24px;
+    --logoTextColor:#f9faf8;
+    --BtnColor:#e5e7eb;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100$display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* INDEX PAGE STYLING */
+
+body{
+    background-color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container1{
+    width: 100%;
+    padding-top: 10px;
+    background-color: var(--top-bottomBgColor);
+    border-radius: .4rem;
+}
+nav{
+    width: 100%;
+    padding: 15px;
+    border-radius: .1rem;
+    background-color: var(--top-bottomBgColor);
+    position:fixed;
+    z-index: 3;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 70px;
+    height: 50px;
+    border-radius:50% ;
+}
+.logo p{
+    font-size: var(--logoTextFont);
+    color: var(--logoTextColor);
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: var(--navLinksFont);
+}
+nav ul li a{
+    color: var(--navLinksColor);
+}
+.welcomeSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 70px;
+    padding: 1rem;
+}
+.welcomeMsg{
+ max-width: 350px;
+ padding: 1rem;
+}
+.welcomeMsg h1{
+    font-size: var(--topHeadingFont);
+    font-weight: bolder;
+    color: var(--topHeadingColor);
+}
+.welcomeMsg p{
+    margin-top: 10px;
+    color: var(--navLinksColor);
+    font-size: var(--navLinksFont); 
+    line-height: 1.5; 
+}
+.topBtn button{
+    width: 80px;
+    padding:5px;
+    border-radius: .3rem;
+    margin: 10px;
+    border: none;
+    background-color: rgb(46, 46, 248);
+}
+.topBtn a{
+    color: var(--BtnColor);
+}
+.sample_img img{
+ width:400px;
+ border-radius: .4rem;
+}
+.container2{
+    width: 100%;
+    margin-top:40px ;
+}
+.container2 h2{
+    font-size: 36px;
+    color: #1F2937;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.frequentProduct{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frequentProduct img{
+    width: 200px;
+    border-radius: .4rem;
+}
+.frequentProduct .product{
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+.frequentProduct .product p{
+    font-size: 18px;
+    margin: auto;
+    margin-top: 30px;
+}
+.footerBtn button{
+    width: 80px;
+    padding:5px;
+    border-radius: .3rem;
+    margin: 10px;
+    color: var(--BtnColor);
+    background-color: #3882f6;
+    outline: none;
+    border-radius: .4rem;
+    border:3px solid white;
+}
+.container3{
+    max-width: 800px ;
+    margin: auto;
+    padding: 25px;
+    font-style: italic;
+    border-radius: .3rem;
+    background-color: #e5e7eb;
+}
+.container3 p{
+    font-size: 36px;
+}
+.container3 .author {
+    font-weight:bold ;
+    text-align: right;
+}
+.container4{
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+}
+.inner_container4 h3{
+    color: white;
+    font-size: 23px;
+}
+.inner_container4 p{
+    color: rgb(245, 229, 229);
+    font-size: 18px;
+}
+.inner_container4{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: .4rem;
+    background-color: #3882f6;
+}
+footer{
+    max-width: 100%;
+    background-color: #1F2937;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 10px ;
+    margin-top: 30px;
+    margin-bottom:20px;
+}
+
+/* hover effects */
+.topBtn button:hover{
+    background-color: rgb(5, 63, 5);
+    transition: 1s ease-in-out;
+}
+nav ul li a:hover{
+    color: goldenrod;
+    transition: 1s ease-in-out;
+}
+.footerBtn button:hover{
+    background-color: rgb(5, 63, 5);
+    transition: 1s ease-in-out;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 950px){
+.welcomeSection{
+    flex-direction: column;
+} 
+.frequentProduct{
+    flex-direction: column;
+}
+.frequentProduct .product{
+    width: 100%;
+}
+.product p{
+    width: 80%;
+    margin: auto;
+}
+.welcomeMsg{
+   max-width: 100%;
+   text-align: center;
+} 
+.sample_img{
+    width: 100%;
+}
+.sample_img img{
+    width: 100%;
+}
+.container3 p{
+    font-size: 18px;
+}
+.container4{
+    padding: 0;
+}
+.inner_container4{
+    max-width: 100%;
+    border-radius:0;
+}
+}
